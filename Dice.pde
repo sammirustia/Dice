@@ -9,8 +9,8 @@ void setup()
 }
 void draw()
 {
-	ray.show();
 	ray.roll();
+	ray.show();
 }
 void mousePressed()
 {
@@ -29,7 +29,7 @@ class Die //models one single dice cube
 	}
 	void roll()
 	{
-		dot = 1;
+		dot = 6;
 	}
 	void show()
 	{
@@ -41,6 +41,38 @@ class Die //models one single dice cube
 		if (dot == 1) {
 			ellipse(xX + 25,yY + 25, 10,10);
 		}
+		if (dot == 2) {
+			ellipse(xX + 16,yY + 25,10,10);
+			ellipse(xX + 33,yY + 25, 10,10);
+		}
+		if (dot == 3) {
+			ellipse(xX + 13,yY + 12,10,10);
+			ellipse(xX + 24,yY + 24, 10,10);
+			ellipse(xX + 36,yY + 36,10,10);
+		}
+		if (dot == 4) {
+			ellipse(xX + 16,yY + 16,10,10);
+			ellipse(xX + 33,yY + 16, 10,10);
+			ellipse(xX + 16,yY + 32,10,10);
+			ellipse(xX + 33,yY + 32, 10,10);
+		}
+		if (dot == 5) {
+			ellipse(xX + 12,yY + 14,10,10);
+			ellipse(xX + 38,yY + 14, 10,10);
+			ellipse(xX + 12,yY + 36,10,10);
+			ellipse(xX + 38,yY + 36, 10,10);
+			ellipse(xX + 25, yY + 25, 10,10);
+		}
+		if (dot == 6) {
+			ellipse(xX + 14,yY + 12,10,10);
+			ellipse(xX + 14,yY + 25, 10,10);
+			ellipse(xX + 14,yY + 38,10,10);
+			ellipse(xX + 36,yY + 12, 10,10);
+			ellipse(xX + 36,yY + 25, 10,10);
+			ellipse(xX + 36,yY + 38, 10,10);
+		}
+
+
 
 
 	}
