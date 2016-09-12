@@ -1,4 +1,7 @@
 Die ray;
+int xX;
+int yY;
+int dot;
 
 void setup()
 {
@@ -9,8 +12,15 @@ void setup()
 }
 void draw()
 {
-	ray.roll();
-	ray.show();
+	
+
+	for(yY = 80;yY<=300;yY+=100){
+		for(xX = 80;xX<=300;xX+=100) {
+			ray.roll();
+			ray.show();
+		}
+	}
+
 }
 void mousePressed()
 {
@@ -18,10 +28,6 @@ void mousePressed()
 }
 class Die //models one single dice cube
 {
-	int xX;
-	int yY;
-	int dot;
-
 	Die(int x, int y) //constructor
 	{
 		xX = xX + 175;
@@ -29,7 +35,7 @@ class Die //models one single dice cube
 	}
 	void roll()
 	{
-		dot = 6;
+		dot = ((int)(Math.random()*6)+1);
 	}
 	void show()
 	{
@@ -71,9 +77,5 @@ class Die //models one single dice cube
 			ellipse(xX + 36,yY + 25, 10,10);
 			ellipse(xX + 36,yY + 38, 10,10);
 		}
-
-
-
-
 	}
 }
