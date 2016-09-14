@@ -20,6 +20,7 @@ void draw()
 		}
 	}
 	textSize(20);
+	fill(63,90,102); 
 	text("Total: " + total,160,40);
 }
 void mousePressed()
@@ -38,7 +39,7 @@ class Die //models one single dice cube
 	{
 		dot = ((int)(Math.random()*6)+1);
 		noStroke();
-		fill(13,104,149);
+		fill(95,136,155);
 		total = total + dot;	
 	}
 	void show()
@@ -46,10 +47,10 @@ class Die //models one single dice cube
 		noStroke();
 		fill(222,231,229);
 		rect(xX,yY,50,50,30);
-		//fill(13,104,149);
+		
 
 		if (dot == 1) {
-			fill(192,280,251);
+			fill(100,240,225);
 			ellipse(xX + 25,yY + 25, 10,10);
 		}
 		if (dot == 2) {
